@@ -1,0 +1,211 @@
+
+@import url(../css/font.css);
+
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+
+    /*  theme colors  */
+    --Alice-blue: #d9f0ff;
+    --Sky-blue: #a3d5ff;
+    --Sky-blue2: #83c9f4;
+    --Slate-blue: #6f73d2;
+    --Glaucous: #7681b3;
+    --midnight: #104f55;
+    
+
+
+    /*  theme font-family  */
+    --Abel:'abel',cursive;
+    --Anton:'anton',cursive;
+    --Josefin:'josefin',cursive;
+    --Lexend:'lexend',cursive;
+}
+
+/*-----------Global Classes----------------*/
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-family: var(--Lexend);
+    
+}
+
+h3{
+    font-family: var(--Lexend);
+}
+
+p{
+    font-family: var(--Abel);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+
+
+/*------x-----Global Classes-------x---------*/
+
+
+
+/*--------------Navigation-----------------*/
+
+.logo {
+    font-size: 1rem;
+    padding: 0;
+}
+.nav{
+    background: var(--Glaucous);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+
+
+.nav-menu{
+    justify-content: space-between;
+    
+}
+
+.toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width:85%;
+    cursor: pointer;
+    display: none;
+
+    
+}
+
+.toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    align-items: center;
+   
+}
+
+.toggle-icons i{
+    font-size: 1.4rem;
+}
+
+.collapse{
+    height: 30rem;
+    background: white;
+    color: black;
+}
+
+.collapse a {
+    color: black;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    
+}
+
+
+.nav-link:hover{
+    background: transparent;
+    cursor: pointer;
+    
+}
+
+.nav-link a{
+    color: black;
+    
+}
+
+.nav-link a:hover{
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+
+.social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0.2rem;
+    color: black;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+
+
+
+/*-------x-------Navigation--------x---------*/
+
+
+/*---------------------Footer----------------*/
+
+.footer{
+    background: var(--Slate-blue);
+    padding: 0.5rem 5rem;
+    height: 100%;
+}
+
+.footer-social i{
+    padding: 0.7rem;
+    background: var(--Alice-blue);
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+
+.flex-row2{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+/*------------xx---------Footer--------xx--------*/
+
+
+/*          Viewport less than or equal to 900px     */
+
+@media only screen and (max-width:767px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .nav .toggle-collapse{
+        display: block;
+        align-items: center;
+    }
+}
+
+/*     x     Viewport less than or equal to 750px  x   */
